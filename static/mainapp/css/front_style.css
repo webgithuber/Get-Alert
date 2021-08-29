@@ -1,0 +1,24 @@
+.pink{background-color: pink;}
+.blue{background-color: blue;}
+.orange{background-color: orange;}
+.red{background-color: red;}
+
+#header{
+    background-color: darkslateblue;
+}
+#header h5,h2{
+    display: inline;
+    
+   
+}
+a{
+    text-decoration-line: none;
+    color: white;
+}
+table
+{
+    table-layout: fixed;
+    width: 100px;
+    word-wrap: break-word;
+}
+#center_table table td a{ color: white;}

@@ -1,0 +1,84 @@
+{% extends 'base.html'%}
+{% block home %}
+
+<div id="form" class="orange mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 m-auto  ">
+                <form action="send" method="GET">
+                  {% csrf_token %}
+                    <div class="form-group">
+                        <label for="select_state">Select state</label>
+                        
+                        <select class="form-control   mb-3" id="select_state" name="select_state">
+                          <option selected>Choose..</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="select_district">Select district</label>
+                        <select class="form-control mb-3" id="select_district" name="select_district" >
+                        
+                          <option>Choose..</option>
+                         
+                        </select>
+                      </div>
+                      <div class="row mb-3 p-0">
+                          <div class="col-2 m-auto blue p-0" style="text-align: center;">OR</div>
+                      </div>
+                      
+                      <div class="row justify-content-center ">
+                          <div class="col-6">
+                            <div class="form-group">
+                                <input type="tel" class="form-control " id="pin" name="pin" placeholder="Enter PIN" maxlength="6" value="" disabled>
+                                <input type="text" id="date" name="date" value="" hidden>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row justify-content-center mt-3 mb-3 p-0">
+                          <div class="col-10 " style="text-align: center;">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block col-12">Search</button>
+                          </div>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="center_table " class="red mt-3">
+    <div class="container">
+        <div class="row justify-content-center ">
+            <div class="col-7 pink">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th >#</th>
+                        <th >Center</th>
+                        <th >Add to list</th>
+                        
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for cntr in q %}
+                      <tr>
+                        <th >{{ forloop.counter }}</th>
+                        <td>{{cntr.0}}</td>
+                        <td><button type="button" class="btn btn-primary">
+                          {% if status %}
+                          <a href="{% url 'mainapp:add' x=cntr.0 y=cntr.1 %}">
+                          {% endif %}
+                          Add</a></button></td>
+                       
+                       
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>  
+
+
+{% endblock home %}
+<!-- onfocus='this.size=5;'  onblur='this.size=1;' onchange='this.size=1; this.blur();' -->

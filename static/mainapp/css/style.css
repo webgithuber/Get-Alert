@@ -1,0 +1,29 @@
+.container{border: 0 solid black;}
+.row{border:0 solid red}
+#header{
+    background-color: coral;
+}
+#menu{
+    background-color:darkgrey;
+    text-decoration-line: none;
+}
+#menu ul{
+    list-style: none;
+    margin: 0;
+}
+#menu ul li{
+    display: inline-block;
+}
+#content{
+    background-color: white;
+}
+a{text-decoration-line: none;}
+#sidebar{
+    background-color:cyan;
+}
+body{background-color: gray;}
+#footer{
+    background-color:coral;
+}
+
+.col,.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{border:0 solid green}

@@ -1,0 +1,128 @@
+
+.pink{background-color: pink;}
+.blue{background-color: blue;}
+.orange{background-color: orange;}
+.red{background-color: red;}
+#header{
+    background-color: #e74c3c;
+    color: white;
+}
+a{text-decoration-line: none;
+display: block;
+color: white;
+}
+#logo{
+    margin-top: 5px;
+}
+#menu  li{
+    display: inline-block;
+    
+}
+#menu  li a{
+   
+    color: #fff;
+    padding: 15px 10px;
+    display: block;
+}
+#menu  li a:hover{
+   
+    background-color: #c0392b;
+}
+#menu{
+    list-style: none;
+    margin: 15px;
+    padding: 15px;
+    display: inline-block;
+    float: right;
+    
+}
+#banner{
+    background: url('image/banner.jpg') no-repeat 0 0 ;
+    background-size: cover;
+
+}
+.banner-title h1{
+    background:rgba(255,255,255,0.8);
+    display: inline-block;
+    padding:10px;
+    margin: 0;
+}
+.banner-title{
+    padding-top: 5rem;
+    padding-bottom: 100px;
+}
+.banner-title p.lead{
+    color:#fff;
+    background: rgba(231,76,60,0.7);
+    padding: 10px;
+    
+}
+.box i.bi {
+    color: #e74c3c;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.section{
+    padding-bottom: 5rem;
+    padding-top: 10px;
+
+}
+.section h2.section-head::after{
+    background: #e74c3c;
+    content:"";
+    display: block;
+    width: 100px;
+    height:3px;
+    margin: 20px auto;
+}
+#testimonial{
+    background: url('image/testi_banner.jpg') no-repeat 0 0 ;
+    background-size: cover;
+}
+#news h3{font-size: 1.35rem;
+    
+}
+#news a{color: #e74c3c;
+
+}
+#news img{
+    width: 100%;
+}
+#footer-sidebar h3::after{
+    background: #e74c3c;
+    content:"";
+    display: block;
+    width: 100px;
+    height:3px;
+    margin: 20px 0;
+}
+#footer-sidebar ul{
+    
+    margin: 0 0;
+    padding:0;
+    list-style: none;
+    
+}
+#footer-sidebar{
+    color: white;
+    background-color: #34495e;
+    padding:20px 0;
+}
+#footer-sidebar a{color:white;
+
+}
+#social-icons li{
+    display: inline-block;
+    padding: 2px;
+}
+#social-icons {
+    float: right;
+    
+}
+#social-icons a{
+    color: white;
+    
+}
+#footer{
+    padding: 0 5px;
+    background-color: teal;}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% load static %}
+    <!-- <link rel="stylesheet" href="{% static 'css/bootstrap-5.0.2' %}"> -->
+    <link rel="stylesheet" href="{% static 'mainapp/css/front_style.css' %}">
+    
+   
+    <title>Document</title>
+</head>
+<body>
+    <div id="header" class="" >
+        <div class="container header ">
+            <div class="row">
+                <div class="col-6  p-0">
+                    <h2 style="color: white;">Get Alert</h2>
+                </div>
+                <div class="col-6    ">
+                    <div class="row p-0 justify-content-end">
+                        <div class="col-3 py-2 " style="text-align: end;">
+                        {% if status %}
+                        <a href="{% url 'mainapp:gtlist' %}">List</a>/<a href="{% url 'mainapp:logout' %}">Logout</a>
+                        {% else %}
+                        <a href="{% url 'mainapp:register' %}">Register</a>/<a href="{% url 'mainapp:register' %}">Login</a>
+                        {% endif %}
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block home %}
+    
+    {% endblock home %}
+    <script type="text/javascript" src="{% static 'mainapp/js/script.js' %}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+</body>
+</html>
